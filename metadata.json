@@ -1,0 +1,8 @@
+{
+  "name": "OnTime - Smart Attendance",
+  "description": "A mobile-first Smart Attendance & HR application for frontline workers with geofencing, shift management, and digital claims processing.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
