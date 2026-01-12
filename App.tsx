@@ -37,7 +37,7 @@ const App: React.FC = () => {
     return (
       <div className="min-h-screen bg-brand-orange flex flex-col items-center justify-center animate-pulse">
         <div className="bg-white p-6 rounded-3xl shadow-2xl">
-           <Logo variant="full" />
+          <Logo variant="full" />
         </div>
       </div>
     );
@@ -52,20 +52,14 @@ const App: React.FC = () => {
     return <AdminDashboard />;
   }
 
-  // Mobile Employee View Wrapper
+  // Mobile Employee View Wrapper (Now Desktop Friendly)
   return (
-    <div className="min-h-screen bg-brand-light max-w-md mx-auto shadow-2xl overflow-hidden relative border-x border-gray-100">
-      <NewsTicker />
-      
-      <main className="h-full overflow-y-auto no-scrollbar scroll-smooth">
-        {activeTab === 'home' && <EmployeeHome />}
-        {activeTab === 'claims' && <ClaimsView />}
-        {activeTab === 'schedule' && <PlaceholderView title="Shift Schedule" />}
-        {activeTab === 'action' && <PlaceholderView title="Quick Actions" />}
-        {activeTab === 'profile' && <PlaceholderView title="User Profile" />}
-      </main>
-
-      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
+    <div className="min-h-screen bg-brand-light">
+      {activeTab === 'home' && <EmployeeHome />}
+      {activeTab === 'claims' && <ClaimsView />}
+      {activeTab === 'schedule' && <PlaceholderView title="Shift Schedule" />}
+      {activeTab === 'action' && <PlaceholderView title="Quick Actions" />}
+      {activeTab === 'profile' && <PlaceholderView title="User Profile" />}
     </div>
   );
 };
